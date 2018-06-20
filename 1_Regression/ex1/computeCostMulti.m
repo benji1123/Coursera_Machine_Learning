@@ -14,7 +14,12 @@ J = 0;
 %               You should set J to the cost.
 
 
+m = size(X,1);										% number of training examples is needed as variable 
+model_predictions = X*theta;						% get model-output to compare with data
 
+squareErrors = (model_predictions-y).^2 			% accuracy of each prediction will be averaged 
+squareError = (1/(2*m)) * sum(squareErrors)			% overall accuracy determined
+J = squareError;
 
 
 % =========================================================================

@@ -20,8 +20,8 @@ for iter = 1:num_iters
 
 
 
-
-
+    c = alpha/m;
+    theta = theta - c * sum((X*theta-y).*X)';
 
 
 

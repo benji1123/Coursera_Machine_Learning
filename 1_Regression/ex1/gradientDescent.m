@@ -17,10 +17,10 @@ for iter = 1:num_iters
 
         c = alpha/m;
 
-        theta = theta - c * sum((X*theta-y).*X)';
+        %theta = theta - c * sum((X*theta-y).*X)';
         % source: https://stackoverflow.com/questions/20735406/vectorization-of-a-gradient-descent-code
 
-        %{ NON-VECTORIZED Algorithm
+        % NON-VECTORIZED Algorithm
         % EVERY ITERATION TAKES US CLOSER TO THE LOCAL MINIMUM
         t0 = theta(1,1) - c * sum((X*theta-y).*X(:,1));                 % theta(1) decrement  
         t1 = theta(2,1) - c * sum((X*theta-y).*X(:,2));                 % theta(2) decrement
@@ -29,7 +29,7 @@ for iter = 1:num_iters
         theta(1,1) = t0;
         theta(2,1) = t1;
         theta=theta
-        %}
+        
 
     % ============================================================
 
