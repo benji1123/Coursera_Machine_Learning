@@ -1,18 +1,16 @@
-function g = sigmoid(z)
-%SIGMOID Compute sigmoid function
-%   g = SIGMOID(z) computes the sigmoid of z.
 
-% You need to return the following variables correctly 
+function g = sigmoid(z)
 g = zeros(size(z));
 
-% ====================== YOUR CODE HERE ======================
-% Instructions: Compute the sigmoid of each value of z (z can be a matrix,
-%               vector or scalar).
+%Compute sigmoid of each value of z (z = matrix, vector or scalar).
 
+rows = size(z,1); 
+cols = size(z,2);
 
+for r = 1:rows,
+	for c = 1:cols,
+	g(r,c) = 1/(1+exp(-z(r,c)));	%non-vectorized
+	end;
 
-
-
-% =============================================================
-
+end;
 end

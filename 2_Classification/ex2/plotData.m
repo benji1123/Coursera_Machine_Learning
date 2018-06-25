@@ -13,7 +13,12 @@ figure; hold on;
 %
 
 
+% Differentiaate accepted and rejected students
+pos = find(y==1); neg = find(y==0);		% pos = admitted, neg = rejected
 
+% Plot two groups of students - stylistic syntax
+plot(X(pos,1), X(pos,2), 'k+', 'LineWidth', 2, 'MarkerSize',7)
+plot(X(neg,1), X(neg,2),'ko','MarkerFaceColor','y','MarkerSize',7);
 
 
 
