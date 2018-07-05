@@ -12,5 +12,4 @@ h = sigmoid(X*theta);									% probability vector
 J = (1/m) * sum((-y)'*log(h) - (1-y)'*log(1-h) )		% error return
 
 % GRADIENT (no idea why)
-grad = (1/m) * sum((h-y).*X)	% vector of partial derivatives
-end
+grad = (1/m) * sum((h-y).*X)							% vector of partial derivativses

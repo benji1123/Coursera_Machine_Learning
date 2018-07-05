@@ -11,6 +11,5 @@ for r = 1:rows,
 	for c = 1:cols,
 	g(r,c) = 1/(1+exp(-z(r,c)));	%non-vectorized
 	end;
-
 end;
 end
