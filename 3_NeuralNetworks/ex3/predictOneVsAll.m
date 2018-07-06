@@ -16,27 +16,14 @@ p = zeros(size(X, 1), 1);
 
 % Add ones to the X data matrix
 X = [ones(m, 1) X];
+X_old=X
 
 % ====================== YOUR CODE HERE ======================
-% Instructions: Complete the following code to make predictions using
-%               your learned logistic regression parameters (one-vs-all).
-%               You should set p to a vector of predictions (from 1 to
-%               num_labels).
-%
-% Hint: This code can be done all vectorized using the max function.
-%       In particular, the max function can also return the index of the 
-%       max element, for more information see 'help max'. If your examples 
-%       are in rows, then, you can use max(A, [], 2) to obtain the max 
-%       for each row.
-%       
 
-
-
-
-
-
-
-% =========================================================================
-
-
+% RUNNING ALL TRAINING EXAMPLES AGAINST EACH CLASSIFIER
+h = sigmoid(X * all_theta'); 	% generated probability from each classifier for each training example
+for i = 1:size(p,1)
+	[w,col] = max(h(i,:));		% identifying the classifier that generated the best result
+	p(i,1) = col;				% returning the corresponding digit (final prediction)
 end
+p=p;
