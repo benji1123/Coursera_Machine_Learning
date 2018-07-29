@@ -1,4 +1,4 @@
-**Overall Process **
+# Overall Process
 
 This NN determines the **digit **pictured in a series of 20x20 px images **integers **in range(1,10).
 
@@ -8,7 +8,7 @@ This NN determines the **digit **pictured in a series of 20x20 px images **integ
 1.  Cost Function
 1.  Gradient
 
-**Forward Propagation**
+## Forward Propagation
 
 
 
@@ -132,7 +132,7 @@ J = (sum(sum((-yVec).*log(a3) - (1-yVec).*log(1-a3) )))/m;
 </table>
 
 
-**Backpropagation **
+## Backpropagation 
 
 Gradient Computation
 
