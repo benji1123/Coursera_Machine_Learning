@@ -14,7 +14,7 @@ p = zeros(size(X, 1), 1);
 
 
 % COMPUTING LABEL of HIDDEN LAYER
-x1 = [ones(m,1) X];						% each row = training example + bias unit
+x1 = [ones(m,1) X];						% each row of X = training example + bias unit
 Theta1=Theta1';							% configure for multiplication with x1
 z2 = x1*Theta1;							% input ==> sigmoid() ==> a2 label
 a2 = sigmoid(z2);
