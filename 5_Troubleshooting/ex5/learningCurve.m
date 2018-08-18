@@ -54,7 +54,6 @@ error_val   = zeros(m, 1);
 
 % ---------------------- Sample Solution ----------------------
 
-%training error
 for i = 1:m,
 	
 	xt = X(1:i,:);
