@@ -14,6 +14,7 @@ grad = zeros(size(theta));
 
 h = sigmoid(X*theta);							% probability vector
 regTerm = lambda/(2*m)*sum(theta.*2);			% increment cost 
+
 J = (1/m) * sum((-y)'*log(h) - (1-y)'*log(1-h)) + regTerm
 
 
